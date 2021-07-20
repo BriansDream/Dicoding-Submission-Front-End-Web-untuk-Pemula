@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Alatsi&family=Schoolbell&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.header-container {
+  max-height: 101px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header-container .header-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-container .header-content .left-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-container .header-content .left-content img {
+  width: 64px;
+  height: 64px;
+}
+
+.header-container .header-content .left-content h2 {
+  font-family: "Alatsi", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-left: 10px;
+  color: #a5a5a5;
+}
+
+.header-container .header-content .right-content h2 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 5px;
+  color: #adadad;
+}
+/*# sourceMappingURL=header.css.map */

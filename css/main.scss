@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Alatsi&family=Chilanka&family=Schoolbell&display=swap');
+
+$fontMain : 'Oswald',
+sans-serif;
+$boxShadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+main {
+    font-family: $fontMain;
+}
+
+.main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .main-content {
+        display: flex;
+
+        .left-content {
+            flex-basis: 20%;
+            padding: 10px;
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .cta-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .btn-cta {
+                    padding: 10px;
+                    flex-basis: 50%;
+                    background-color: red;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    color: white;
+                    text-align: center;
+                    font-size: 60%;
+                    font-family: $fontMain;
+                    max-height: fit-content;
+                    max-width: 100%;
+
+                }
+
+                .btn-cta:hover {
+                    box-shadow: $boxShadow;
+                    transition: all 0.5s ease-in-out;
+                    background-color: green;
+                }
+
+                .total-books {
+                    text-align: center;
+                    color: black;
+                    flex-basis: 50%;
+                }
+            }
+
+        }
+
+        .right-content {
+            font-family: $fontMain;
+            padding: 10px;
+            display: flex;
+            flex-basis: 80%;
+            justify-content: space-around;
+
+            #unfinished-book {
+                width: 100%;
+                margin-right: 10px;
+
+                h4 {
+                    letter-spacing: 5px;
+                }
+
+                .container {
+                    box-shadow: $boxShadow;
+                    padding: 10px;
+                    border-radius: 15px;
+
+                    .btnSelesai {
+                        background: url(../asset/finish-line.svg);
+                        width: 40px;
+                        height: 40px;
+                        cursor: pointer;
+                        box-shadow: $boxShadow;
+                        background-size: contain;
+                        border: none;
+                    }
+
+                    .btnHapus {
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        box-shadow: $boxShadow;
+                        background: url(../asset/delete.svg);
+                        border: none;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            .finished-book {
+                width: 100%;
+
+                h4 {
+                    letter-spacing: 5px;
+
+                }
+
+                .container {
+                    box-shadow: $boxShadow;
+                    padding: 10px;
+                    border-radius: 15px;
+
+
+
+                    .btnUndo {
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        box-shadow: $boxShadow;
+                        background: url(../asset/return.svg);
+                        border: none;
+                        background-size: contain;
+                    }
+
+                    .btnHapus {
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        box-shadow: $boxShadow;
+                        background: url(../asset/delete.svg);
+                        border: none;
+                        background-size: contain;
+                    }
+                }
+
+                .container:hover {
+                    box-shadow: $boxShadow;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 159, 159, 0.2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+
+
+
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        border-radius: 15px;
+        width: 30%;
+        height: 30%;
+        box-shadow: $boxShadow;
+        position: relative;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            width: inherit;
+
+            #book-title,
+            #book-author,
+            #book-year {
+                margin-bottom: 10px;
+                border-radius: 5px;
+                font-family: $fontMain;
+            }
+
+            #btnSave {
+                background-color: red;
+                border-radius: 30px;
+                color: white;
+                border-color: white;
+                font-family: $fontMain;
+                border: none;
+                cursor: pointer;
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-weight: bold;
+                cursor: pointer;
+
+            }
+        }
+    }
+
+    .bg-active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .main-container {
+            .main-content {
+                flex-direction: column;
+            }
+        }
+
+        .modal-bg {
+            .modal {
+                width: 80%;
+                height: 50%;
+            }
+        }
+    }

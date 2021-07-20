@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Alatsi&family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+$FontLogo: 'Alatsi',
+sans-serif;
+$FontRight: 'Oswald',
+sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header-container {
+    max-height: 101px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .header-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left-content {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 64px;
+                height: 64px;
+            }
+
+            h2 {
+                font-family: $FontLogo;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                margin-left: 10px;
+                color: rgb(165, 165, 165);
+            }
+        }
+
+        .right-content {
+            h2 {
+                font-family: $FontRight;
+                letter-spacing: 5px;
+                color: rgb(173, 173, 173);
+            }
+        }
+    }
+}
